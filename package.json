@@ -1,0 +1,22 @@
+{
+  "name": "aura-weather-dashboard",
+  "version": "1.0.0",
+  "description": "A premium, glassmorphic real-time Weather Dashboard web application.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server -p 3000",
+    "start": "npx -y http-server -p 3000"
+  },
+  "keywords": [
+    "weather",
+    "dashboard",
+    "glassmorphism",
+    "pwa"
+  ],
+  "author": "Antigravity AI",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
