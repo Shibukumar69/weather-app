@@ -1814,51 +1814,170 @@ body.light-theme .skeleton-pulse {
     grid-column: span 1;
   }
   .highlights-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 992px) {
   .app-container {
     grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
   .app-sidebar {
     height: auto;
     position: relative;
     border-right: none;
     border-bottom: 1px solid var(--glass-border);
-    box-shadow: 0 4px 20px var(--glass-shadow);
+    box-shadow: 0 4px 24px var(--glass-shadow);
+    padding: 16px;
+    gap: 16px;
+  }
+  .favorites-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .favorites-list::-webkit-scrollbar {
+    display: none;
+  }
+  .favorite-chip {
+    flex: 0 0 auto;
+  }
+  .history-section {
+    display: none; /* Hide vertical history list to save screen space */
   }
   .app-main {
     height: auto;
     overflow-y: visible;
+    padding: 16px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .chart-container {
+    height: 180px;
   }
 }
 
 @media (max-width: 576px) {
-  .app-main {
-    padding: 16px;
+  .app-sidebar {
+    padding: 12px;
+  }
+  .sidebar-header {
+    justify-content: center;
   }
   .action-bar {
-    padding: 12px 16px;
+    padding: 10px 12px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .greeting {
+    font-size: 1.1rem;
+  }
+  .live-clock, .current-date {
+    font-size: 0.75rem;
+  }
+  .action-controls {
+    gap: 6px;
+  }
+  .icon-action-btn {
+    width: 32px;
+    height: 32px;
+  }
+  .icon-action-btn .svg-icon {
+    width: 14px;
+    height: 14px;
   }
   .hero-card {
     padding: 20px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
   }
-  .hero-right {
-    align-self: flex-end;
-    align-items: flex-end;
+  .city-title {
+    font-size: 1.6rem;
+  }
+  .date-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+  }
+  .temp-big {
+    font-size: 3.5rem;
+  }
+  .temp-degree-symbol {
+    font-size: 2rem;
+  }
+  .condition-text {
+    font-size: 1rem;
+  }
+  .animated-icon-container {
+    width: 90px;
+    height: 90px;
+  }
+  .forecast-5day-section, .hourly-slider-section, .charts-section {
+    padding: 16px;
+  }
+  .forecast-day {
+    width: 80px;
+    font-size: 0.8rem;
+  }
+  .forecast-condition-wrapper {
+    width: 100px;
+  }
+  .forecast-condition-desc {
+    display: none; /* Hide text description to fit screen width */
   }
   .highlights-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px;
   }
-  .charts-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+  .highlight-card {
+    padding: 12px;
+    min-height: 130px;
+    gap: 8px;
+  }
+  .highlight-title {
+    font-size: 0.65rem;
+  }
+  .highlight-value {
+    font-size: 1.6rem;
+  }
+  .compass-container {
+    width: 44px;
+    height: 44px;
+  }
+  .circular-chart {
+    width: 40px;
+    height: 40px;
+  }
+  .sun-arc-dashed, .sun-arc-fill {
+    height: 50px;
+  }
+  .sun-indicator {
+    font-size: 0.8rem;
+  }
+  .voice-card {
+    width: 92%;
+    padding: 20px;
+  }
+  .settings-card {
+    width: 95%;
+    max-height: 90vh;
+  }
+  .toast-container {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    max-width: none;
   }
 }
 
